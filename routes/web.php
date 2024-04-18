@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 use App\Http\Controllers\HelloController;
 
-Route::get('hello', HelloController::class);
+Route::get('hello', [HelloController::class, "index"]);
+Route::post('hello', [HelloController::class, "post"]);

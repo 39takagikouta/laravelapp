@@ -7,7 +7,13 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    public function __invoke(Request $request, Response $response) {
-        return "{$request->path()}:{$response->content()}";
+    public function index() {
+        $date = ["msg"=>"これはコントローラー"];
+        return view('hello.index', $date);
+    }
+    public function post(Request $request) {
+        $msg =$request->msg;
+        $date = ["msg"=>"こんにちは". $msg . 'さん'];
+        return view('hello.index', $date);
     }
 }

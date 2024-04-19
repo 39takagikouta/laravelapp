@@ -19,6 +19,10 @@ Route::get('/', function () {
 });
 
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\PersonController;
 
 Route::get('hello', [HelloController::class, "index"]);
 Route::post('hello', [HelloController::class, "post"]);
+Route::get('person', [PersonController::class, "index"]);
+Route::get('person/add', [PersonController::class, "add"]);
+Route::post('person/add', [PersonController::class, "create"]);

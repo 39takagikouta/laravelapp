@@ -5,13 +5,22 @@
   <title>Document</title>
 </head>
 <body>
-  <p>{{$msg}}</p>
-  <p>{{$view_message}}</p>
+  <p>{{$data["name"]}}</p>
+  <p>{{$data["mail"]}}</p>
   <form method="POST" action="/hello">
     @csrf
     <input type="text" name="msg">
     <input type="submit">
   </form>
-
+  <table>
+    <tr>
+      <td>行1、セル1</td>
+      <td>行1、セル2</td>
+    </tr>
+    <tr>
+      <td>行2、セル1</td>
+      <td>行2、セル2</td>
+    </tr>
+  </table>
 </body>
 </html>

@@ -7,9 +7,8 @@ use Illuminate\Http\Response;
 
 class HelloController extends Controller
 {
-    public function index() {
-        $date = ["msg"=>"これはコントローラー"];
-        return view('hello.index', $date);
+    public function index(Request $request) {
+        return view('hello.index', ['data'=>$request->data]);
     }
     public function post(Request $request) {
         $msg =$request->msg;

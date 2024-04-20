@@ -20,7 +20,6 @@ class PersonController extends Controller
     }
     public function create(Request $request) {
         Log::debug('test3');
-        dd($request->all());
         Log::info('Method start');
         \Debugbar::debug('debug');
         $this->validate($request, Person::$rules);
